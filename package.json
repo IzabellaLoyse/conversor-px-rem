@@ -6,18 +6,12 @@
   "scripts": {
     "dev": "sass --watch src/sass:public/css --style compressed",
     "tsc": "tsc --watch",
-    "lint:fix": "eslint --fix"
+    "lint:fix": "eslint --fix",
+    "commit": "git-cz"
   },
   "keywords": [],
   "author": "Izabella Loyse Cândido",
   "license": "MIT",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint:fix",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
-    }
-  },
   "devDependencies": {
     "@commitlint/cli": "^16.0.2",
     "@commitlint/config-conventional": "^16.0.0",
