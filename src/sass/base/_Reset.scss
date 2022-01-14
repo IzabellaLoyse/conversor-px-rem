@@ -1,0 +1,68 @@
+/*----- RESET CSS ----- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  outline-offset: 0.25rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+label {
+  cursor: pointer;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+// input::placeholder {}
+// textarea::placeholder {}
+// input::-webkit-input-placeholder {}
+// textarea::-webkit-input-placeholder {}
+// input::-moz-placeholder {}
+// textarea::-moz-placeholder {}
+// input:-ms-input-placeholder {}
+// textarea:-ms-input-placeholder {}
