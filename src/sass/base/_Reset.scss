@@ -1,4 +1,5 @@
-/*----- RESET CSS ----- */
+@use '../abstract/variables';
+@use 'sass:map';
 
 *,
 *::before,
@@ -15,9 +16,18 @@
 html,
 body {
   height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 body {
+  background-color: map.get(variables.$colors, 'primary-color');
+  color: map.get(variables.$colors, 'second-color');
+  font-family: 'Poppins', sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -50,6 +60,9 @@ h3,
 h4,
 h5,
 h6 {
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
   overflow-wrap: break-word;
 }
 

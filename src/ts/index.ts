@@ -9,10 +9,10 @@ const getToPixelValues = (valuePixels: number, valueRoot: number) => {
 
 const getValuesToInputPixels = () => {
   const rootInput: HTMLInputElement = document.querySelector(
-    '#js-input-root',
+    '.js-input-root',
   ) as HTMLInputElement;
   const pixelsInput: HTMLInputElement = document.querySelector(
-    '#js-input-pixels',
+    '.js-input-pixels',
   ) as HTMLInputElement;
 
   const rootInputValue: number = Number(rootInput.value);
@@ -23,7 +23,7 @@ const getValuesToInputPixels = () => {
 
 const resultValueREM = () => {
   const remInput: HTMLInputElement = document.querySelector(
-    '#js-input-rem',
+    '.js-input-rem',
   ) as HTMLInputElement;
 
   remInput.value = getValuesToInputPixels().toString();

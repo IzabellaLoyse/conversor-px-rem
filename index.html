@@ -4,29 +4,71 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="" />
-    <meta name="author" content="Izabella Loyse Candido" />
-    <meta theme-color="" />
+    <meta name="author" content="Izabella Loyse Cândido" />
+    <meta theme-color="#242424" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="public/css/style.css" />
+    <link rel="stylesheet" href="../public/css/style.css" />
 
-    <title>Document</title>
+    <title>Conversor de Medidas</title>
   </head>
   <body>
     <header>
       <h1>Conversor de Medidas</h1>
     </header>
 
-    <main>
+    <form>
       <section>
-        <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="./src/conversorPxRem.html">Conversor Px To REM</a></li>
-            <li><a href="#">Sobre</a></li>
-          </ul>
-        </nav>
+        <h2>Converte Pixels em REM</h2>
+        <p>
+          Cálculo baseado no tamanho de fonte raiz correspondente a
+          <strong> 16px</strong>
+        </p>
       </section>
-    </main>
+
+      <div>
+        <label for="root-pixels">Tamanho da Fonte Raiz</label>
+        <input
+          type="text"
+          id="root-pixels"
+          class="js-input-root"
+          aria-labelledby="root font size"
+          placeholder="Ex: 16"
+        />
+        <span>px</span>
+      </div>
+
+      <div>
+        <label for="pixels">Pixels</label>
+        <input
+          type="text"
+          id="pixels"
+          class="js-input-pixels"
+          aria-labelledby="font size in pixels"
+          placeholder="Ex: 24"
+        />
+        <span>px</span>
+      </div>
+
+      <div>
+        <label for="rem">REM</label>
+        <input
+          type="text"
+          id="rem"
+          class="js-input-rem"
+          aria-labelledby="font size in rem"
+          disabled
+        />
+        <span>rem</span>
+      </div>
+
+      <button type="button" class="js-button-calculate">Converter</button>
+    </form>
+    <script src="../dist/js/index.js"></script>
   </body>
 </html>

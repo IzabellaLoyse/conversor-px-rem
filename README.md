@@ -1,8 +1,10 @@
-# Conversor PX to REM
+# 🔍 Conversor PX to REM
+
+- Converte medidas pixels em REM
 
 ## 💡 Guia de instalação
 
-## 📌 Pré-requesitos
+## 📌 Pré-requisitos
 
 Antes de começar, você precisará ter instalado em sua máquina as seguintes ferramentas:
 
@@ -46,7 +48,6 @@ Usando Yarn:
 ```
 yarn install
 ```
-
 
 ## 🔮 Compilando o CSS do projeto
 

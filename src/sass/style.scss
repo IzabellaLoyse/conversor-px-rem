@@ -1,13 +1,6 @@
 @charset "utf-8";
 
-/* ----- ABSTRACT ----- */
-
-/* ----- VENDOR ----- */
-
-/* ----- BASE ----- */
-
-/* ----- LAYOUT ----- */
-
-/* ----- COMPONENT ----- */
-
-/* ----- STATE ----- */
+@use 'abstract/abstract.scss';
+@use 'vendor/vendor';
+@use 'base/base';
+@use 'components/components.scss';
