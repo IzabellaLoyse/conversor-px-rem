@@ -68,6 +68,10 @@
   margin-top: 1.5rem;
 }
 
+.form__input--disabled {
+  color: map.get(variables.$colors, 'second-color');
+}
+
 .form__container {
   display: flex;
   align-items: center;

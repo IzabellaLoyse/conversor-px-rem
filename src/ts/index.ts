@@ -4,29 +4,35 @@ const button: HTMLButtonElement = document.querySelector(
 
 const getToPixelValues = (valuePixels: number, valueRoot: number) => {
   const result = valuePixels / valueRoot;
+
+  if (!valuePixels || !valueRoot) {
+    alert('Preencha o(s) campo(s) com um valor válido.');
+    return null;
+  }
+
   return result;
 };
 
 const getValuesToInputPixels = () => {
-  const rootInput: HTMLInputElement = document.querySelector(
-    '.js-input-root',
-  ) as HTMLInputElement;
-  const pixelsInput: HTMLInputElement = document.querySelector(
-    '.js-input-pixels',
-  ) as HTMLInputElement;
+  const form = document.forms as any;
+  const formMeasurement = form.measurementConverter;
 
-  const rootInputValue: number = Number(rootInput.value.replace(',', '.'));
-  const pixelsInputValue: number = Number(pixelsInput.value.replace(',', '.'));
+  const { rootPixels, pixels } = formMeasurement;
 
-  return getToPixelValues(pixelsInputValue, rootInputValue);
+  const rootInputValue = Number(rootPixels.value.replace(',', '.'));
+  const pixelsInputValue = Number(pixels.value.replace(',', '.'));
+  const result = getToPixelValues(pixelsInputValue, rootInputValue) as any;
+
+  return result;
 };
 
 const resultValueREM = () => {
-  const remInput: HTMLInputElement = document.querySelector(
-    '.js-input-rem',
-  ) as HTMLInputElement;
+  const form = document.forms as any;
+  const formMeasurement = form.measurementConverter;
 
-  remInput.value = getValuesToInputPixels().toString();
+  const { rem } = formMeasurement;
+
+  rem.value = getValuesToInputPixels();
 };
 
 button.addEventListener('click', (event) => {
