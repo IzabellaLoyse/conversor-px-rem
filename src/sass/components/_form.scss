@@ -1,0 +1,77 @@
+@use '../abstract/variables';
+@use 'sass:map';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__title {
+    margin-bottom: 0.5rem;
+    font-weight: map.get(variables.$font-weight, 'medium');
+    font-size: 1.6rem;
+  }
+
+  &__description {
+    margin-bottom: 0.5rem;
+    font-weight: map.get(variables.$font-weight, 'regular');
+    font-size: 1.1rem;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  width: 100%;
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  label {
+    padding-bottom: 0.5rem;
+    font-weight: map.get(variables.$font-weight, 'regular');
+  }
+
+  input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+  }
+}
+
+.form__btn {
+  margin-top: 1.5rem;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  width: 8rem;
+  height: 3rem;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+  color: map.get(variables.$colors, 'primary-color');
+  background-color: map.get(variables.$colors, 'second-color');
+  font-weight: map.get(variables.$font-weight, 'bold');
+
+  &:hover {
+    opacity: 0.4;
+  }
+}
+
+.form__content {
+  margin-top: 1.5rem;
+}
+
+.form__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}

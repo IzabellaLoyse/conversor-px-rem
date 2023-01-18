@@ -15,8 +15,8 @@ const getValuesToInputPixels = () => {
     '.js-input-pixels',
   ) as HTMLInputElement;
 
-  const rootInputValue: number = Number(rootInput.value);
-  const pixelsInputValue: number = Number(pixelsInput.value);
+  const rootInputValue: number = Number(rootInput.value.replace(',', '.'));
+  const pixelsInputValue: number = Number(pixelsInput.value.replace(',', '.'));
 
   return getToPixelValues(pixelsInputValue, rootInputValue);
 };
@@ -29,4 +29,8 @@ const resultValueREM = () => {
   remInput.value = getValuesToInputPixels().toString();
 };
 
-button.addEventListener('click', resultValueREM);
+button.addEventListener('click', (event) => {
+  event.preventDefault();
+
+  resultValueREM();
+});

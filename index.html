@@ -12,63 +12,76 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="public/css/style.css" />
 
     <title>Conversor de Medidas</title>
   </head>
   <body>
-    <header>
-      <h1>Conversor de Medidas</h1>
+    <header class="header">
+      <h1 class="header__title">Conversor de Medidas</h1>
     </header>
 
-    <form>
-      <section>
-        <h2>Converte Pixels em REM</h2>
-        <p>
+    <main>
+      <section class="container">
+        <h2 class="container__title">Converte Pixels em REM</h2>
+        <p class="container__description">
           Cálculo baseado no tamanho de fonte raiz correspondente a
           <strong> 16px</strong>
         </p>
       </section>
 
-      <div>
-        <label for="root-pixels">Tamanho da Fonte Raiz</label>
-        <input
-          type="text"
-          id="root-pixels"
-          class="js-input-root"
-          aria-labelledby="root font size"
-          placeholder="Ex: 16"
-        />
-        <span>px</span>
-      </div>
+      <form class="form">
+        <div class="form__group form__content">
+          <label for="root-pixels">Tamanho da Fonte Raiz</label>
+          <input
+            type="text"
+            id="root-pixels"
+            class="js-input-root"
+            aria-labelledby="root font size"
+            placeholder="Ex: 16"
+            value="16"
+          />
+          <strong>px</strong>
+        </div>
 
-      <div>
-        <label for="pixels">Pixels</label>
-        <input
-          type="text"
-          id="pixels"
-          class="js-input-pixels"
-          aria-labelledby="font size in pixels"
-          placeholder="Ex: 24"
-        />
-        <span>px</span>
-      </div>
+        <div class="form__container">
+          <div class="form__group">
+            <label for="pixels">Pixels</label>
+            <input
+              type="text"
+              id="pixels"
+              class="js-input-pixels"
+              aria-labelledby="font size in pixels"
+              placeholder="Ex: 24"
+            />
+            <strong>px</strong>
+          </div>
 
-      <div>
-        <label for="rem">REM</label>
-        <input
-          type="text"
-          id="rem"
-          class="js-input-rem"
-          aria-labelledby="font size in rem"
-          disabled
-        />
-        <span>rem</span>
-      </div>
+          <div class="form__group">
+            <label for="rem">REM</label>
+            <input
+              type="text"
+              id="rem"
+              class="js-input-rem"
+              aria-labelledby="font size in rem"
+              disabled
+            />
+            <strong>rem</strong>
+          </div>
+        </div>
 
-      <button type="button" class="js-button-calculate">Converter</button>
-    </form>
+        <button type="button" class="form__btn js-button-calculate">
+          Converter
+        </button>
+      </form>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__description">
+        Desenvolvido por <strong>Izabella Loyse</strong>💙
+      </p>
+    </footer>
+
     <script src="dist/js/index.js"></script>
   </body>
 </html>
